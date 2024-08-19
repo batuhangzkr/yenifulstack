@@ -6,7 +6,7 @@ import cors from "cors";
 
 import mongoose from "mongoose";
 
-import { authRouter } from "./routes";
+import { authRouter, carRouter } from "./routes";
 
 configDotenv();
 const app = express();
@@ -17,6 +17,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use("/auth", authRouter);
+app.use("/car", carRouter);
 
 mongoose
   .connect(process.env.MONGO_URI as any)

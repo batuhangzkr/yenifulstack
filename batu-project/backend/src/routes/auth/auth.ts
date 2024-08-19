@@ -52,7 +52,8 @@ router.post("/login", async (req, res) => {
       uye_sifre: user.uye_sifre,
       uye_soyadi: user.uye_soyadi,
       uye_tel_no: user.uye_tel_no,
-    } as TUserData,
+      uye_id: user._id,
+    },
     process.env.SECRET as any
   );
 

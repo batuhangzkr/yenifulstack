@@ -8,6 +8,7 @@ export type TUserData = {
   uye_email: string;
   uye_sifre: string;
   uye_kayit_tarihi: string;
+  uye_id: string;
 };
 
 const userSchema = new Schema<TUserData>({
